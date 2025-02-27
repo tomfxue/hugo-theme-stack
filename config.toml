@@ -29,11 +29,14 @@ min = "0.87.0"
   readingTime = true
 
   [params.widgets]
-    [[widgets.homepage]]
-    type = "search"
-    type = "categories"
-    type = "tag-cloud"
-    type = "toc"
+      [params.widgets.homepage.categories]
+      limit = 10
+      [params.widgets.homepage.tag-cloud]
+      limit = 10
+      [params.widgets.homepage.toc]
+      enabled = true
+      [params.widgets.page.toc]
+      enabled = true
 
 [params.opengraph.twitter]
 card = "summary_large_image"
